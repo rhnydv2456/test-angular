@@ -1,0 +1,21 @@
+<table class="table" *ngIf="users">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Email</th>
+      <th scope="col">Navigate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users.data">
+      <th scope="row">{{ user.id }}</th>
+      <td>{{ user.email }}</td>
+      <td>
+        <button class="primary" routerLink="/users/{{ user.id }}">
+          Click!
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button routerLink="/resources">Navigate to resources</button>

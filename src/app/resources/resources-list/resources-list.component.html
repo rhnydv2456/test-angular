@@ -1,0 +1,21 @@
+<table class="table" *ngIf="resources">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Navigate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let resource of resources.data">
+      <th scope="row">{{ resource.id }}</th>
+      <td>{{ resource.name }}</td>
+      <td>
+        <button class="primary" routerLink="/resources/{{ resource.id }}">
+          Click!
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button routerLink="/users">Navigate to users</button>
